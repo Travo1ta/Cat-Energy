@@ -64,36 +64,25 @@
         >
           <fieldset class="form__group field-group">
             <legend class="visually-hidden">Данные кота</legend>
+
             <ul class="field-group__list">
               <li class="field-group__item">
-                <label class="field" for="name">ИМЯ:*</label>
-                <span class="field-lead"></span>
-                <input
-                  class="field-input"
-                  type="text"
-                  id="name"
-                  placeholder="БАРСИК"
-                />
+                <label class="field">
+                  <span class="field-lead">ИМЯ:*</span>
+                  <input class="field-input" type="text" placeholder="БАРСИК" />
+                </label>
               </li>
               <li class="field-group__item">
-                <label class="field" for="weight">Вес (кг):*</label>
-                <span class="field-lead"></span>
-                <input
-                  class="field-input"
-                  type="text"
-                  id="weight"
-                  placeholder="7"
-                />
+                <label class="field">
+                  <span class="field-lead">Вес (кг):*</span>
+                  <input class="field-input" type="text" placeholder="7" />
+                </label>
               </li>
               <li class="field-group__item">
-                <label class="field" for="age">Возраст (лет):</label>
-                <span class="field-lead"></span>
-                <input
-                  class="field-input"
-                  type="text"
-                  id="age"
-                  placeholder="7"
-                />
+                <label class="field">
+                  <span class="field-lead">Возраст (лет):</span>
+                  <input class="field-input" type="text" placeholder="7" />
+                </label>
               </li>
             </ul>
           </fieldset>
@@ -102,7 +91,7 @@
             <legend class="visually-hidden">Рекомендации</legend>
             <ul class="field-group__list">
               <li class="field-group__item">
-                <label class="control">
+                <label class="control control--radio">
                   <input
                     class="visually-hidden control__input"
                     type="radio"
@@ -115,7 +104,7 @@
                 </label>
               </li>
               <li class="field-group__item">
-                <label class="control">
+                <label class="control control--radio">
                   <input
                     class="visually-hidden control__input"
                     type="radio"
@@ -127,7 +116,7 @@
                 </label>
               </li>
               <li class="field-group__item">
-                <label class="control">
+                <label class="control control--radio">
                   <input
                     class="visually-hidden control__input"
                     type="radio"
@@ -147,50 +136,57 @@
             </legend>
             <ul class="field-group__list">
               <li class="field-group__item">
-                <label class="field" for="mail">E-mail:*</label>
-                <input
-                  class="field-input"
-                  type="email"
-                  id="mail"
-                  name="You_email"
-                  placeholder="кuklachev@gmail.com"
-                />
+                <label class="field">
+                  <span class="field-lead">E-mail:*</span>
+                  <input
+                    class="field-input"
+                    type="email"
+                    id="mail"
+                    name="e-mail"
+                    placeholder="кuklachev@gmail.com"
+                  />
+                </label>
               </li>
               <li class="field-group__item">
-                <label class="field" for="phone"> Телефон:* </label>
-                <input
-                  class="field-input"
-                  type="text"
-                  id="phone"
-                  name="appointment-phone"
-                  placeholder="8 (960) 900-60-90"
-                />
+                <label class="field">
+                  <span class="field-lead">Телефон:*</span>
+                  <input
+                    class="field-input"
+                    type="tel"
+                    id="phone"
+                    name="appointment-phone"
+                    placeholder="8 (960) 900-60-90"
+                  />
+                </label>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="form__group field-group">
-            <legend class="field-group__legend">коментарий</legend>
-            <label class="visually-hidden" for="comment">коментарий</label>
-            <textarea
-              id="comment"
-              cols="50"
-              rows="10"
-              name="habits"
-              placeholder="Расскажите обо всех повадках кота"
-            ></textarea>
-          </fieldset>
+          <div class="form__group field-group">
+            <label class="field-group__legend" for="comment">коментарий</label>
+            <div class="field">
+              <textarea
+                class="field-input"
+                id="comment"
+                cols="50"
+                rows="5"
+                name="habits"
+                placeholder="Расскажите обо всех повадках кота"
+              ></textarea>
+            </div>
+          </div>
 
           <fieldset class="form__group field-group">
             <legend class="field-group__legend">Дополнительно</legend>
 
             <ul class="field-group__list">
               <li class="field-group__item">
-                <label class="control">
+                <label class="control control--checkbox">
                   <input
                     class="visually-hidden control-input"
                     type="checkbox"
-                    name="sugar"
+                    name="plus"
+                    value="sugar"
                     checked
                   />
                   <span class="control-mark"></span>
@@ -198,42 +194,48 @@
                 </label>
               </li>
               <li class="field-group__item">
-                <label class="control">
+                <label class="control control--checkbox">
                   <input
                     class="visually-hidden control-input"
                     type="checkbox"
-                    name="water"
+                    name="plus"
+                    value="water"
                   />
                   <span class="control-mark"></span>
                   <span class="control-label">питьевая вода</span>
                 </label>
               </li>
               <li class="field-group__item">
-                <label class="control">
+                <label class="control control--checkbox">
                   <input
                     class="visually-hidden control-input"
                     type="checkbox"
-                    name="milk"
+                    name="plus"
+                    value="milk"
                   />
                   <span class="control-mark"></span>
                   <span class="control-label">молоко</span>
                 </label>
               </li>
               <li class="field-group__item">
-                <label class="control">
+                <label class="control control--checkbox">
                   <input
                     class="visually-hidden control-input"
                     type="checkbox"
-                    name="vitamin"
+                    name="plus"
+                    value="vitamins"
                   />
                   <span class="control-mark"></span>
                   <span class="control-label">витамины</span>
                 </label>
               </li>
             </ul>
-            <input type="button" value="отправить заявку" />
-            <p class="field-group__additinal">* — Обязательные поля</p>
           </fieldset>
+
+          <button class="form__button button" type="submit">
+            отправить заявку
+          </button>
+          <p class="field-group__additinal">* — Обязательные поля</p>
         </form>
       </section>
 
@@ -263,7 +265,7 @@
 
     <footer class="page__footer page-footer">
       <div class="container">
-        <a class="page-footer__logo logo" href="#">
+        <a class="page-footer__logo logo" href="index.html">
           <img
             class="logo__image"
             src="img/footer-logo-left.png"
