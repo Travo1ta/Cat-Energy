@@ -1,0 +1,23 @@
+header {
+  background-color: #52e952;
+
+  .page-header__nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-header__list {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    list-style: none;
+
+    .site-list__item {
+      margin-right: 25px;
+    }
+  }
+}
+
+body {
+  background-color: #5167e9;
+}

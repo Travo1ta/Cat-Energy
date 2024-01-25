@@ -4,27 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Кэт Энерджи: Подбор программы</title>
+	 <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page__header page-header">
       <div class="container">
         <nav class="page-header__nav">
           <a class="page-header__logo logo" href="index.html">
-            <img
-              class="logo__image"
-              src="img/svg/logo-mobile.svg"
-              width="34"
-              height="38"
-              alt="Cat Energy"
-            />
-            <img
-              class="logo__slogan"
-              src="img/svg/logo-slogan.svg"
-              width="101"
-              height="19"
-              alt="Nime cat"
-              aria-hidden="true"
-            />
+            <picture>
+              <source
+                media="(min-width: 1300px)"
+                srcset="img/svg/logo-desktop.svg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/svg/logo-tablet.svg"
+              />
+              <img
+                class="logo__img"
+                src="img/svg/logo-mobile.svg"
+                alt="Логотип Cat Energy"
+              />
+            </picture>
           </a>
 
           <button class="page-header__toggler" type="button">
@@ -168,7 +169,6 @@
               <textarea
                 class="field-input"
                 id="comment"
-                cols="50"
                 rows="5"
                 name="habits"
                 placeholder="Расскажите обо всех повадках кота"
@@ -235,7 +235,7 @@
           <button class="form__button button" type="submit">
             отправить заявку
           </button>
-          <p class="field-group__additinal">* — Обязательные поля</p>
+          <p class="form__additinal">* — Обязательные поля</p>
         </form>
       </section>
 

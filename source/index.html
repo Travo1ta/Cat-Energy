@@ -4,27 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Academy: Кэт энерджи</title>
+	 <link rel="stylesheet" href="/source/sass/css/style.css">
   </head>
   <body class="page__body">
     <header class="page__header page-header">
       <div class="container">
         <nav class="page-header__nav">
           <a class="page-header__logo logo" href="index.html">
-            <img
-              class="logo__image"
-              src="img/svg/logo-mobile.svg"
-				  width="34"
-				  height="38"
-              alt="Cat Energy"
-            />
-            <img
-              class="logo__slogan"
-              src="img/svg/logo-slogan.svg"
-				  width="101"
-				  height="19"
-              alt="Nime cat"
-              aria-hidden="true"
-            />
+            <picture>
+              <source
+                media="(min-width: 1300px)"
+                srcset="img/svg/logo-desktop.svg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/svg/logo-tablet.svg"
+              />
+              <img
+                class="logo__img"
+                src="img/svg/logo-mobile.svg"
+                alt="Логотип Cat Energy"
+              />
+            </picture>
           </a>
 
           <button class="page-header__toggler" type="button">
@@ -71,9 +72,7 @@
           <h2 class="visually-hidden">програмы похудения</h2>
 
           <div class="program-column">
-
             <article class="program-section__ident programs">
-
               <div class="program-section__image">
                 <svg
                   class="programs__icon programs__icon--slim"
@@ -245,7 +244,7 @@
       <div class="container">
         <a class="page-footer__logo logo" href="index.html">
           <img
-            class="logo__image"
+            ass="logo__image"
             src="img/footer-logo-left.png"
             width="128"
             height="24"
@@ -325,7 +324,7 @@
           href="https://htmlacademy.ru/"
         >
           <span class="visually-hidden">Разработано в</span>
-			 HTML Academy
+          HTML Academy
           <img
             class="developer__image"
             src="img/svg/htmlacademy.svg"
