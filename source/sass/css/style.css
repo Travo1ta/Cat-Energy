@@ -1,23 +1,20 @@
 header {
   background-color: #52e952;
 }
-
 header .page-header__nav {
   display: flex;
   justify-content: space-between;
 }
-
 header .page-header__list {
   display: flex;
   justify-content: space-between;
   margin-left: 50px;
   list-style: none;
 }
-
 header .page-header__list .site-list__item {
   margin-right: 25px;
 }
 
 body {
-  background-color: #5167e9;
+  background-color: #616994;
 }/*# sourceMappingURL=style.css.map */
