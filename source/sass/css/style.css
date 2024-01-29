@@ -1,5 +1,5 @@
 header {
-  background-color: #52e952;
+  background-color: #2deb2d;
 }
 header .page-header__nav {
   display: flex;
@@ -16,5 +16,5 @@ header .page-header__list .site-list__item {
 }
 
 body {
-  background-color: #616994;
+  background-color: #3750e1;
 }/*# sourceMappingURL=style.css.map */
