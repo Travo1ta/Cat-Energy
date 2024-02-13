@@ -1,5 +1,11 @@
+body {
+  margin: 0 auto;
+  min-width: 1654px;
+  color: #444444;
+}
+
 header {
-  background-color: #e1ea69;
+  background-color: #1da343;
 }
 header .page-header__nav {
   display: flex;
@@ -16,5 +22,5 @@ header .page-header__list .site-list__item {
 }
 
 body {
-  background-color: #4c62de;
+  background-color: #de4c82;
 }/*# sourceMappingURL=style.css.map */
