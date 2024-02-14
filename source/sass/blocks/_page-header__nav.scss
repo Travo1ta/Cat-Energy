@@ -1,0 +1,8 @@
+@media (min-width: $tablet-width) {
+  .page-header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+}

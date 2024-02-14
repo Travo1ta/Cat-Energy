@@ -3,29 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no">
     <title>Кэт Энерджи: Подбор программы</title>
 	 <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page__header page-header">
+    <header class="page-header page-header--preview">
       <div class="container">
         <nav class="page-header__nav">
           <a class="page-header__logo logo" href="index.html">
-            <picture>
-              <source
-                media="(min-width: 1300px)"
-                srcset="img/svg/logo-desktop.svg"
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="img/svg/logo-tablet.svg"
-              />
-              <img
-                class="logo__img"
-                src="img/svg/logo-mobile.svg"
-                alt="Логотип Cat Energy"
-              />
-            </picture>
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/svg/logo-desktop.svg" />
+            <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg" />
+            <img class="logo__img" src="img/svg/logo-mobile.svg"  alt="Логотип Cat Energy" />
+          </picture>
           </a>
 
           <button class="page-header__toggler" type="button">

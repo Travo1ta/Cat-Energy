@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Кэт энерджи</title>
-	 <link rel="stylesheet" href="/source/css/style.css">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+	  <link rel="stylesheet" href="/source/css/style.css">
   </head>
   <body class="page__body">
-    <header class="page__header page-header">
+    <header class="page-header page-header--preview">
       <div class="container">
         <nav class="page-header__nav">
           <a class="page-header__logo logo" href="index.html">
@@ -23,6 +26,7 @@
               <img
                 class="logo__img"
                 src="img/svg/logo-mobile.svg"
+                width="193" height="40"
                 alt="Логотип Cat Energy"
               />
             </picture>
