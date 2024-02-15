@@ -359,7 +359,7 @@ body {
     border: none;
   }
 }
-@media (min-width: 1300px) {
+@media (min-width: 1440px) {
   .page-header {
     padding-top: 55px;
   }
@@ -369,7 +369,7 @@ body {
     background-position: right top, center;
   }
 }
-@media (min-width: 1300px) and (min-resolution: 144dpi), (min-width: 1300px) and (min-resolution: 1.5dppx) {
+@media (min-width: 1440px) and (min-resolution: 144dpi), (min-width: 1440px) and (min-resolution: 1.5dppx) {
   .page-header--preview {
     background-image: url("../img/index-background-desktop@2x.jpg"), linear-gradient(to right, #ffffff 50%, #64a83c 50%);
     background-size: 720px auto, 100%;
@@ -381,5 +381,70 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+  }
+}
+.container {
+  min-width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 1440px;
+    padding: 0 40px;
+  }
+}
+.logo {
+  margin: 0;
+  margin-right: auto;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.logo[href]:hover, .logo[href]:focus {
+  opacity: 0.8;
+}
+.logo[href]:active {
+  opacity: 0.6;
+}
+.logo--footer {
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.logo__img--footer {
+  width: 128px;
+  height: 24px;
+}
+
+@media (min-width: 768px) {
+  .logo__img {
+    width: 173px;
+    height: auto;
+    max-width: 100%;
+  }
+  .logo__img--footer {
+    width: 128px;
+    height: 24px;
+    margin-top: 4px;
+  }
+}
+@media (min-width: 1440px) {
+  .logo {
+    transform: translateY(-2px);
+  }
+  .logo__img {
+    width: 202px;
+    height: auto;
+  }
+  .logo__img--footer {
+    width: 128px;
   }
 }/*# sourceMappingURL=style.css.map */
