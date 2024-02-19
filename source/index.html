@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
-	  <link rel="stylesheet" href="/source/css/style.css">
+	 <link rel="stylesheet" href="/source/css/style.css">
   </head>
-  <body class="page__body">
-    <header class="page-header page-header--preview">
-      <div class="container">
-        <nav class="page-header__nav">
-          <a class="page-header__logo logo" href="index.html">
+  <body class="page-body">
+    <header class="page-header page-header--index">
+      <div class="page-header__nav-wrapper content-wrapper">
+        <nav class="page-header__main-nav main-nav">
+          <div class="main-nav__logo-wrapper">
+          <a class="header-logo" href="index.html">
             <picture>
               <source
                 media="(min-width: 1440px)"
@@ -24,7 +25,7 @@
                 srcset="img/svg/logo-tablet.svg"
               />
               <img
-                class="logo__img"
+                class="header-logo__image"
                 src="img/svg/logo-mobile.svg"
                 width="193" height="40"
                 alt="Логотип Cat Energy"
@@ -32,45 +33,52 @@
             </picture>
           </a>
 
-          <button class="page-header__toggler" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
+        <button class="main-nav__toggle main-nav__toggle--off" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        </div>
+        <ul class="main-menu">
+          <li class="main-menu__item">
+            <a class="main-menu__link main-menu__link--index main-menu__link--active">Главная</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link main-menu__link--index" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link main-menu__link--index" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
 
-          <ul class="page-header__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a class="site-list__link" href="index.html">главная</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html"
-                >каталог продукции</a
-              >
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="form.html">подбор программы</a>
-            </li>
-          </ul>
         </nav>
       </div>
+
+      <section class="page-header__promo promo">
+        <div class="content-wrapper">
+          <div class="promo__content">
+            <h1 class="promo__title">Функциональное питание для котов</h1>
+
+            <p class="promo__text">Занялся собой? Займись котом!</p>
+
+            <picture class="promo__picture">
+              <source type="image/webp" media="(min-width: 1440px)"
+                srcset="img/content/index-can-desktop@1x.webp 1x, img/content/index-can-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/content/index-can-tablet@1x.webp 1x, img/content/index-can-tablet@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/content/index-can-mobile@1x.webp 1x, img/content/index-can-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)"
+                srcset="img/content/index-can-desktop@1x.png 1x, img/content/index-can-desktop@2x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/content/index-can-tablet@1x.jpg 1x, img/content/index-can-tablet@2x.jpg 2x">
+              <img class="promo__image" src="img/content/index-can-mobile@1x.png" srcset="img/content/index-can-mobile@2x.png 2x" alt="Корм для котов Cat Energy Pro">
+
+            </picture>
+
+            <a class="promo__link button button--green" href="form.html">Подобрать программу</a>
+          </div>
+        </div>
+      </section>
     </header>
-
-    <main class="page__main page-main">
-      <div class="container">
-        <header class="page-main__headar promo">
-          <h1 class="promo__title">Функциональное питание для котов</h1>
-          <p class="promo__tagline">Занялся собой? Займись котом!</p>
-
-          <img
-            class="promo__image"
-            src="img/index-can-mobile.png"
-            width="280"
-            height="276"
-            alt="Cat Energy с курицей"
-          />
-
-          <a class="promo__button button" href="./form.html"
-            >Подобрать программу</a
-          >
-        </header>
 
         <section class="page-main__section program-section">
           <h2 class="visually-hidden">програмы похудения</h2>
@@ -196,7 +204,7 @@
                   class="example__image example__image--before"
                   width="280"
                   height="232"
-                  src="img/before-mobile.png"
+                  src="img/content/before-mobile.png"
                   alt="Кот до употребления корма выглядит: толстым , усталым"
                 />
 
@@ -204,7 +212,7 @@
                   class="example__image example__image--after"
                   width="280"
                   height="232"
-                  src="img/cat-skinny.png"
+                  src="img/content/cat-skinny.png"
                   alt="Кот после употребления корма выглядит: кот молодым , худым "
                 />
               </div>
@@ -249,7 +257,7 @@
         <a class="page-footer__logo logo" href="index.html">
           <img
             class="logo__img logo__img--footer"
-            src="img/footer-logo-left.png"
+            src="img/content/footer-logo-left.png"
             width="128"
             height="24"
             alt="логотип Cat Energy"

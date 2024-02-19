@@ -1,9 +1,8 @@
-@import "includes/_fonts";
-@import "includes/_normalize";
-@import "includes/_variables";
-@import "includes/_global";
-@import "blocks/_page-header";
-@import "blocks/page-header__nav";
-@import "blocks/_container";
-@import "blocks/_logo";
-
+@import "includes/fonts";
+@import "includes/normalize";
+@import "includes/variables";
+@import "includes/global";
+@import "blocks/page-body";
+@import "blocks/visually-hidden";
+@import "blocks/page-header";
+@import "blocks/content-wrapper";

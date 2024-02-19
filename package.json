@@ -20,5 +20,9 @@
   "engines": {
     "node": "^16"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "node-sass": "^9.0.0",
+    "postcss-scss": "^4.0.9"
+  }
 }
