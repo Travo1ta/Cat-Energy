@@ -354,25 +354,6 @@ body {
   margin: 0;
 }
 
-.page-body {
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  margin: 0;
-  min-width: 320px;
-  min-height: 100%;
-  font-family: Oswald, Tahoma, sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  color: #444444;
-  background-color: #ffffff;
-}
-@media ((min-width: $tablet-width)) {
-  .page-body {
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
-
 .visually-hidden,
 .visually-hidden::before,
 .visually-hidden::after {
@@ -417,7 +398,7 @@ body {
     background-size: 720px auto, 100%;
   }
 }
-.content-wrapper {
+.container {
   min-width: 320px;
   padding: 0 20px;
   margin: 0 auto;
@@ -425,14 +406,111 @@ body {
 }
 
 @media (min-width: 768px) {
-  .content-wrapper {
+  .container {
     min-width: 768px;
     padding: 0 30px;
   }
 }
 @media (min-width: 1440px) {
-  .content-wrapper {
+  .container {
     width: 1440px;
     padding: 0 40px;
   }
+}
+.page-footer {
+  background-color: #f2f2f2;
+  padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .page-footer {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .page-footer {
+    padding: 30px 0 25px;
+  }
+}
+.page-footer__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 1440px) {
+  .page-footer__row {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+}
+@media (min-width: 768px) {
+  .page-footer__row {
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+}
+
+.social {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+@media (min-width: 768px) {
+  .social {
+    border-top: none;
+    border-bottom: none;
+  }
+}
+.social__item {
+  margin: 0 16px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .social__item {
+    margin: 0 11px;
+  }
+}
+.social__item--ident {
+  margin: 0 24px;
+}
+
+@media (min-width: 768px) {
+  .social__item--ident {
+    margin: 0 20px;
+  }
+}
+.social__icon {
+  fill: #666666;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (min-width: 768px) {
+  .social__icon--vk {
+    width: 30px;
+    height: 22px;
+  }
+  .social__icon--insta {
+    width: 23px;
+    height: 23px;
+  }
+  .social__icon--fb {
+    width: 28px;
+    height: 33px;
+  }
+}
+.social__icon:hover {
+  fill: #68b738;
+}
+
+.social__icon:active {
+  opacity: 0.3;
 }/*# sourceMappingURL=style.css.map */

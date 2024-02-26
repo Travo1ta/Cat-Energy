@@ -1,10 +1,11 @@
 {
-  "name": "{{projectName}}",
+  "name": "cat-energy",
   "private": true,
   "description": "Личный проект «{{projectTitle}}» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "@stylistic/stylelint-plugin": "^2.0.0",
+    "gulp-cli": "^2.3.0",
     "stylelint": "13.13.1",
     "stylelint-config-htmlacademy": "0.1.10"
   },

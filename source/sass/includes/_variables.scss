@@ -24,8 +24,8 @@ $retina-dppx: 1.5dppx;
 
 
 
-$tablet: "(min-width: $tablet-width)";
-$desktop: "(min-width: $desktop-width)";
+$tablet: "(min-width: 768px)";
+$desktop: "(min-width: 1440px)";
 
 $retina: "(min-resolution: $retina-dpi)";
 
