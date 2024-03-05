@@ -9,7 +9,7 @@
   left: 0;
   min-height: 306px;
   width: 100%;
-  background-image: url("/source/img/content/index-background-mobile@1x.jpg");
+  background-image: url("../img/content/index-background-mobile@1x.jpg");
   background-color: $green-primary;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@
 }
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   .page-header--index::after {
-    background-image: url("/source/img/content/index-background-mobile@2x.jpg");
+    background-image: url("../img/content/index-background-mobile@2x.jpg");
   }
 }
 
@@ -31,11 +31,11 @@
   .page-header--index::after {
     display: block;
     width: 50%;
-    min-height: 696px;
+    min-height: 694px;
     top: 0;
     right: 0;
     left: inherit;
-    background-image: url("/source/img/content/index-background-desktop@1x.jpg");
+    background-image: url("../img/content/index-background-desktop@1x.jpg");
     background-color: $green-primary;
     background-position: 0%;
     background-repeat: no-repeat;
@@ -46,7 +46,7 @@
 @media (min-width: $desktop-width) and (min-resolution: $retina-dpi),
   (min-width: $desktop-width) and (min-resolution: $retina-dppx) {
   .page-header--index::after {
-    background-image: url("/source/img/content/index-background-desktop@2x.jpg");
+    background-image: url("../img/content/index-background-desktop@2x.jpg");
   }
 }
 @media (min-width: $tablet-width) {
@@ -113,6 +113,88 @@
   opacity: 0.6;
 }
 
+.page-header__toggle {
+  position: relative;
+  z-index: 7;
+  display: inline-block;
+  padding: 0;
+  width: 25px;
+  line-height: 30px;
+  margin-bottom: 6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+.page-header__toggle--close span {
+  background: transparent;
+}
+.page-header__toggle--close span::after,
+.page-header__toggle--close span::before {
+  transform: rotate3d(0, 0, 1, 45deg);
+  transition: 0.3s;
+  transition:
+    0.3s,
+    transform 0.3s 0.3s;
+  transition:
+    0.3s,
+    transform 0.3s 0.3s;
+  top: 0;
+}
+
+.page-header__toggle--close span::before {
+  transform: rotate3d(0, 0, 1, -45deg);
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__toggle {
+    display: none;
+  }
+}
+
+.page-header__toggle span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 2px;
+  font-size: 0;
+  color: transparent;
+  background: $color_dark-gray-title;
+  transition: 0.3s;
+}
+.page-header__toggle span::after,
+.page-header__toggle span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: $color_dark-gray-title;
+  transform-origin: 50% 50%;
+  transition: 0.3s 0.3s;
+  transition:
+    0.3s 0.3s,
+    transform 0.3s;
+    transition:
+    0.3s 0.3s,
+    transform 0.3s;
+}
+.page-header__toggle span::after {
+  top: 7px;
+}
+.page-header__toggle span::before {
+  top: -7px;
+}
+
 .navigation {
   display: none;
   width: 100%;
@@ -159,29 +241,39 @@
   margin-left: -20px;
   margin-right: -20px;
   border-top: 1px solid $gray-lighten;
-  transition: 0.3s; }
-  @media (min-width: $tablet-width) {
-    .navigation__link {
-      font-size: 18px;
-      font-weight: 400; } }
-  @media (min-width: $desktop-width) {
-    .navigation__link {
-      font-size: 20px; } }
-  @media (min-width: $tablet-width) {
-    .navigation__link {
-      margin: 0;
-      border: none;
-      padding: 10px 19px; }
-      .navigation__link--active::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 20px;
-        right: 0;
-        height: 2px;
-        background: #68b738;
-        width: calc(100% - 40px); } }
-  .navigation__link:hover {
-    opacity: 0.6; }
-  .navigation__link:active {
-    opacity: 0.3; }
+  transition: 0.3s;
+}
+@media (min-width: $tablet-width) {
+  .navigation__link {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+@media (min-width: $desktop-width) {
+  .navigation__link {
+    font-size: 20px;
+  }
+}
+@media (min-width: $tablet-width) {
+  .navigation__link {
+    margin: 0;
+    border: none;
+    padding: 10px 19px;
+  }
+  .navigation__link--active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 0;
+    height: 2px;
+    background: $green-primary;
+    width: calc(100% - 40px);
+  }
+}
+.navigation__link:hover {
+  opacity: 0.6;
+}
+.navigation__link:active {
+  opacity: 0.3;
+}
