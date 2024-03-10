@@ -162,33 +162,49 @@
               в день.
             </p>
             <div class="example__wrapper">
-              <dl class="example__list">
-                <dt class="example__total">5 кг</dt>
-                <dd class="example__text">снижение веса</dd>
-
-                <dt class="example__total">60 дней</dt>
-                <dd class="example__text">затрачено дней</dd>
-              </dl>
-              <p class="example__spending">
-                <span>Затраты на питание:</span>15 000 руб.
-              </p>
+              <ul class="result">
+                <li class="result__item">
+                  <div class="result__wrapper">
+                    <strong class="result__total">5 кг</strong>
+                    <p class="result__text">снижение веса</p>
+                  </div>
+                </li>
+                <li class="result__item">
+                  <div class="result__wrapper">
+                    <strong class="result__total">60 дней</strong>
+                    <p class="result__text">затрачено времени</p>
+                  </div>
+                </li>
+              </ul>
+              <p class="example__total"><span>Затраты на питание:</span> 15 000 руб.</p>
             </div>
           </div>
           <div class="example__column example__column--xl example__column--color">
             <div class="comparisons">
-              <div class="example__images">
-                <img class="example__image example__image--before" width="280" height="232"
-                  src="img/content/before-mobile.png" alt="Кот до употребления корма выглядит: толстым , усталым" />
 
-                <img class="example__image example__image--after" width="280" height="232"
-                  src="img/content/cat-skinny.png" alt="Кот после употребления корма выглядит: кот молодым , худым " />
+              <div class="comparisons__group-pick">
+                <picture>
+
+                  <source media="(min-width: 1440px)" srcset="img/content/before-desktop@1x.png, img/content/before-tablet@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/content/before-tablet@1x.png, img/content/before-tablet@2x.png 2x">
+                  <img class="comparisons__img comparisons__img--before" src="img/content/before-mobile@1x.png"
+                    srcset="img/content/before-mobile@2x.png 2x" alt="Большой кот">
+                </picture>
+                <picture>
+
+
+                  <source media="(min-width: 1440px)" srcset="img/content/after-desktop@1x.png, img/content/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/content/after-tablet@1x.png, img/content/after-tablet@2x.png 2x">
+                  <img class="comparisons__img comparisons__img--after" src="img/content/after-mobile@1x.png"
+                    srcset="img/content/after-mobile@2x.png 2x" alt="стройный кот">
+                </picture>
               </div>
-              <div class="example__switrcher switrcher">
-                <button class="switrcher__button">Было</button>
-                <div class="switrcher__progres">
-                  <div class="switrcher__togle"></div>
-                  <button class="switrcher__button">Стало</button>
+              <div class="comparisons__range">
+                <button class="comparisons__btn">Было</button>
+                <div class="comparisons__progress">
+                  <div class="comparisons__tog"></div>
                 </div>
+                <button class="comparisons__btn">Стало</button>
               </div>
             </div>
           </div>

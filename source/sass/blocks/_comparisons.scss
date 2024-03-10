@@ -1,0 +1,194 @@
+@media (min-width: $tablet-width) {
+  .comparisons {
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .comparisons {
+    position: relative;
+    margin-top: 10px;
+  }
+}
+
+.comparisons__range {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 195px;
+  margin: 0 auto;
+  padding: 30px 0 35px;
+}
+@media (min-width: $tablet-width) {
+  .comparisons__range {
+    max-width: 575px;
+    padding: 10px 0 70px;
+  }
+}
+@media (min-width: $desktop-width) {
+  .comparisons__range {
+    margin-left: auto;
+    margin-right: inherit;
+    padding: 30px 0 65px;
+  }
+}
+
+.comparisons__btn {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: pointer;
+  color: $color_dark-gray-title;
+  transition: 0.3s;
+}
+@media (min-width: $tablet-width) {
+  .comparisons__btn {
+    font-size: 20px;
+    padding: 5px 0;
+    border-bottom: 1px dotted $gray-85;
+  }
+  .comparisons__btn:hover {
+    border-bottom: 1px solid $gray-85;
+  }
+  .comparisons__btn:active {
+    border-bottom: 1px solid transparent;
+  }
+}
+
+.comparisons__progress {
+  position: relative;
+  max-width: 85px;
+  width: 100%;
+  height: 14px;
+  border: 1px solid $gray-85;
+  border-radius: 50px;
+  background: #ffffff;
+}
+.comparisons__progress::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  right: 5px;
+  width: 35px;
+  height: 6px;
+  border-radius: 50px;
+  background: $green-primary;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+@media (min-width: $tablet-width) {
+  .comparisons__progress::after {
+    display: none;
+  }
+}
+@media (min-width: $tablet-width) {
+  .comparisons__progress {
+    max-width: inherit;
+    height: 6px;
+    margin: 0 25px;
+    background: $gray-85;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .comparisons__tog {
+    position: absolute;
+    top: 50%;
+    left: 50.5%;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid $gray;
+    background: $color_light;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+  }
+  .comparisons__tog::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: $color_green;
+  }
+  .comparisons__tog:hover {
+    box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.15);
+  }
+  .comparisons__tog:active {
+    border: 2px solid #68b738;
+    box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.comparisons__group-pick {
+  max-width: 280px;
+  margin: 0 auto;
+}
+@media (min-width: $tablet-width) {
+  .comparisons__group-pick {
+    position: relative;
+    display: flex;
+    max-width: inherit;
+    height: 576px;
+  }
+}
+@media (min-width: $desktop-width) {
+  .comparisons__group-pick {
+    height: 510px;
+  }
+}
+
+.comparisons__img {
+  display: block;
+  margin-left: -20px;
+  max-width: inherit;
+}
+.comparisons__img--after {
+  display: none;
+}
+@media (min-width: $tablet-width) {
+  .comparisons__img--after {
+    display: block;
+  }
+}
+@media (min-width: $tablet-width) {
+  .comparisons__img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .comparisons__img--after {
+    clip: rect(auto, auto, auto, 350px);
+    margin-bottom: 6px;
+  }
+  .comparisons__img--before {
+    clip: rect(auto, 350px, auto, auto);
+  }
+}
+@media (min-width: $desktop-width) {
+  .comparisons__img {
+    left: 50px;
+  }
+  .comparisons__img--after {
+    clip: rect(auto, auto, auto, 340px);
+    margin-bottom: 10px;
+  }
+  .comparisons__img--before {
+    clip: rect(auto, 340px, auto, auto);
+  }
+}
