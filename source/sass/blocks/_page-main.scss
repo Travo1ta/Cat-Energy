@@ -1,126 +1,45 @@
-.promo {
-  position: relative;
-  text-align: center;
-  padding-top: 27px;
-  margin-bottom: 20px;
+.page-main {
+  display: block;
+  overflow: hidden;
+}
+.page-main--none {
+  overflow: visible;
 }
 
-@media (min-width: $tablet-width) {
-  .promo {
-    padding-left: 90px;
-    padding-top: 55px;
-    margin-bottom: 5px;
-    min-height: 860px;
-    text-align: left;
-  }
-}
-@media (min-width: $desktop-width) {
-  .promo {
-    min-height: 530px;
-    padding-top: 55px;
-    padding-left: 80px;
-    margin-bottom: 80px;
-  }
-}
-
-.promo__title {
+.page-main__title {
   font-weight: 400;
   font-size: 36px;
   line-height: 1;
-  font-family: "Oswald", "Arial", sans-serif;
   color: $color_dark-gray-title;
-  margin-bottom: 23px;
+  margin-bottom: 40px;
   margin-top: 0;
-  color: $color_gray;
+  padding-top: 28px;
 }
 
 @media (min-width: $tablet-width) {
-  .promo__title {
+  .page-main__title {
     font-size: 60px;
-  }
-}
-@media (min-width: $tablet-width) {
-  .promo__title {
-    max-width: 520px;
-    margin-bottom: 45px;
-    text-align: left;
-    color: $color_dark-gray-title;
-  }
-}
-
-.promo__text {
-  font-size: 14px;
-  font-weight: 400;
-  font-family: "Oswald", "Arial", sans-serif;
-  color: $color_gray;
-  text-transform: uppercase;
-  margin-bottom: 25px;
-  margin-top: 0;
-}
-@media (min-width: $tablet-width) {
-  .promo__text {
-    font-size: 20px;
-    line-height: 1;
-    margin-bottom: 45px;
-    color: $color_dark-gray-title;
+    margin-bottom: 55px;
+    padding-top: 55px;
   }
 }
 @media (min-width: $desktop-width) {
-  .promo__text {
-    margin-bottom: 50px;
+  .page-main__title {
+    padding-top: 20px;
+    margin-bottom: 57px;
   }
 }
 
-.promo__image {
-  display: block;
-  margin: 0 auto;
-}
 @media (min-width: $tablet-width) {
-  .promo__image {
-    position: absolute;
-    bottom: 0;
-    right: 100px;
-    margin: 0 auto;
-    z-index: -1;
-  }
-}
-@media (min-width: $desktop-width) {
-  .promo__image {
-    position: absolute;
-    top: -32px;
-    left: 50%;
-    bottom: inherit;
-    margin: 0 auto;
-    transform: translateX(-34%);
+  .page-main--title {
+    padding-top: 43px;
+    margin-bottom: 70px;
   }
 }
 
-.promo__button {
-  display: inline-block;
-  width: 100%;
-  padding: 10px 15px;
-  text-transform: uppercase;
-  border: none;
-  text-align: center;
-  background: $color_green;
-  color: $color_light;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 20px;
-  font-family: "Oswald", "Arial", sans-serif;
-  transition: 0.3s;
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .page-main__title--ident {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
 }
-.promo__button:hover {
-  background: $color_dark-green;
-}
-.promo__button:active {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.promo__button--green {
-    font-size: 14px; }
-    @media (min-width: 768px) {
-      .promo__button--green {
-        font-size: 20px;
-        width: auto;
-        padding: 16px 27px; } }
