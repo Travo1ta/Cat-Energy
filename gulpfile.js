@@ -138,3 +138,49 @@ gulp.task("server", function () {
 
 gulp.task("build", gulp.series("clean", "copy", "images", "webp", "css", "js", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));
+
+
+// Подключение Gulp и плагинов
+const cssnano = require("gulp-cssnano");
+const concat = require("gulp-concat");
+const uglify = require("gulp-uglify");
+const imagemin = require("gulp-imagemin");
+
+// Определяем задачи
+// Компилируем Sass в CSS, добавляем префиксы, минимизируем и объединяем CSS файлы
+gulp.task("styles", () => {
+  return gulp
+    .src("src/scss/**/*.scss") // Исходные файлы
+    .pipe(sass()) // Компилируем Sass в CSS
+    .pipe(autoprefixer()) // Добавляем префиксы
+    .pipe(cssnano()) // Минимизируем CSS
+    .pipe(concat("styles.min.css")) // Объединяем в один файл
+    .pipe(gulp.dest("dist/css")); // Папка назначения
+});
+
+// Минимизируем и объединяем JavaScript файлы
+gulp.task("scripts", () => {
+  return gulp
+    .src("src/js/**/*.js") // Исходные файлы
+    .pipe(uglify()) // Минимизируем JavaScript
+    .pipe(concat("scripts.min.js")) // Объединяем в один файл
+    .pipe(gulp.dest("dist/js")); // Папка назначения
+});
+
+// Оптимизируем изображения
+gulp.task("images", () => {
+  return gulp
+    .src("src/images/**/*") // Исходные файлы
+    .pipe(imagemin()) // Оптимизируем изображения
+    .pipe(gulp.dest("dist/images")); // Папка назначения
+});
+
+// Следим за изменениями в исходных файлах и запускаем соответствующие задачи
+gulp.task("watch", () => {
+  gulp.watch("src/scss/**/*.scss", gulp.series("styles")); // Отслеживаем Sass файлы
+  gulp.watch("src/js/**/*.js", gulp.series("scripts")); // Отслеживаем JavaScript файлы
+  gulp.watch("src/images/**/*", gulp.series("images")); // Отслеживаем файлы изображений
+});
+
+// Задача по умолчанию для запуска при вводе «gulp» в терминале
+gulp.task("default", gulp.series("styles", "scripts", "images", "watch"));

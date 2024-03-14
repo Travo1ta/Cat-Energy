@@ -23,6 +23,7 @@
   },
   "type": "module",
   "dependencies": {
+    "gulp": "^4.0.2",
     "node-sass": "^9.0.0",
     "postcss-scss": "^4.0.9"
   }
